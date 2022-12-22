@@ -5,8 +5,16 @@ require('dotenv').config();
 module.exports = {
   solidity: "0.8.17",
   networks:{
-    bsc:{
-      url : process.env.INFURA_BSC_ENDPOINT,
+    goerli:{
+      url : process.env.GOERLI_END_POINT,
+      accounts:[process.env.PRIVATE_KEY]
+    },
+    sepolia:{
+      url : process.env.SEPOLIA_END_POINT,
+      accounts:[process.env.PRIVATE_KEY]
+    },
+    bsc: {
+      url : process.env.BSC_END_POINT,
       accounts:[process.env.PRIVATE_KEY]
     }
   }
